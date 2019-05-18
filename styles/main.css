@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: none; }
+
+@font-face {
+  font-family: acronymBold;
+  src: url("../fonts/Acronym-Bold.ttf"); }
+@font-face {
+  font-family: acronymExtraBold;
+  src: url("../fonts/Acronym-ExtraBold.ttf"); }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'acronymBold', 'Arial', sans-serif;
+  font-size: 14px;
+  color: #444; }
+
+.back {
+  z-index: 5;
+  color: white; }
+
+.mouseFollower {
+  position: fixed;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid black;
+  z-index: 1000000000000;
+  pointer-events: none;
+  overflow: hidden; }
+
+.middleDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 50%; }
+
+.container {
+  height: 100vh;
+  width: 100%;
+  position: relative; }
+
+.roundTransform {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle; }
+
+.leftText {
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: black; }
+
+.rightText {
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: black; }
+
+.containerPage2 {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none; }
+
+.roundScroll {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 40vh; }
+
+.flex-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around; }
+
+.item {
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
+  background-color: white;
+  filter: drop-shadow(0px 3px 6px rgba(255, 255, 255, 0.161));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-color: lightBlue;
+  background-image: url("../images/bg1.jpg");
+  overflow: hidden;
+  position: relative; }
+
+.textbox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 20%;
+  background-color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 11; }
+
+.textbox span {
+  color: white;
+  font-size: 34px; }
+
+.opening {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; }
+
+.textbox-clone {
+  display: none;
+  width: 17.5vw;
+  height: 5vw;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.3)); }
+
+.desc {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform: translateY(100%); }
+
+.desc .headline {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 10%; }
+
+.arrowBack {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  display: none; }
+
+.arrowBack img {
+  transform: scaleX(-1); }
+
+.textImageFullWidth {
+  margin-top: 10vh;
+  width: 80%;
+  height: 100vh; }
+  .textImageFullWidth .img {
+    line-height: 1; }
+
+/*HEADER*/
+a {
+  color: white;
+  text-decoration: none; }
+
+header {
+  font-family: acronymBold;
+  font-size: 18px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000000000000000000000000000;
+  color: white; }
+
+.right {
+  display: flex;
+  flex-flow: row nowrap; }
+
+.contentH {
+  margin: 20px;
+  padding: 10px;
+  z-index: 10000;
+  pointer-events: auto; }
+
+.sandwich span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: white;
+  border-radius: 3px;
+  z-index: 10000; }
+
+.about_before {
+  padding-right: 0;
+  margin-right: 0;
+  opacity: 0;
+  transform: translateX(300px); }
+
+.about {
+  position: relative;
+  border-left: 0;
+  padding-left: 20px; }
+
+@media screen and (max-width: 1200px) {
+  * {
+    cursor: pointer; }
+
+  .mouseFollower {
+    display: none; }
+
+  .textbox span {
+    font-size: 27px; } }
+
+/*# sourceMappingURL=main.css.map */
