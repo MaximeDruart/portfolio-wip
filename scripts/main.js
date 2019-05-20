@@ -169,7 +169,8 @@ function openItem(index, item) {
     .set(".roundScroll", {position:"absolute"})
     .set(".opening .textbox", {display:"flex", zIndex:15, width:widthTC, height:heightTC, scale:sc})
     .set(".opening .textbox span", {innerText:txtToClone})
-    .to(".desc", 0.6, {y:"65%", zIndex:11})
+    .set(".opening", {pointerEvents:"auto"})
+    .to(".desc", 0.6, {y:"-20%", zIndex:11})
   openTl.play()
 
 }
@@ -178,4 +179,23 @@ document.querySelector('.arrowBack').addEventListener('click', () => {
   TweenMax.set(".arrowBack", {display:"none"} )
   openTl.reverse()
   bigDotActive = false
+})
+
+let tlText = new TimelineMax({paused:true})
+tlText.to('.text div p', 0.3, {y:"100%"})
+tlText.set('.text div p', {innerText:"This is some other text."})
+tlText.to('.text div p', 0.3, {y:"0%"})
+
+document.querySelector('.img').addEventListener('click', () => {
+  tlText.restart()
+})
+
+document.querySelector('.img').addEventListener('mouseover', () => {
+  TweenMax.to('.img', 0.45, {scale:1.1})
+  TweenMax.to('.img img', 0.45, {scale:1.2})
+})
+
+document.querySelector('.img').addEventListener('mouseleave', () => {
+  TweenMax.to('.img', 0.45, {scale:1})
+  TweenMax.to('.img img', 0.45, {scale:1})
 })
